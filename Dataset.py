@@ -1,6 +1,7 @@
 import random
 from PIL import Image
 from pathlib import Path
+import torch
 from torch.utils.data import Dataset
 from Transforms import anchor_transform, non_anchor_transforms
 
@@ -74,5 +75,6 @@ class MVTec_Dataset(Dataset):
         anchor_tensor = self.transforms['anchor'](anchor_img)
         pos_tensor = self.transforms['non-anchor'](pos_img)
         neg_tensor = self.transforms['non-anchor'](neg_img)
-        
-        return anchor_tensor, pos_tensor, neg_tensor, neg_type
+        neg_type_tensor = torch.tensor(neg_type)
+
+        return anchor_tensor, pos_tensor, neg_tensor, neg_type_tensor
