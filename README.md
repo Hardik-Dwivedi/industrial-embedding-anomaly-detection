@@ -213,10 +213,10 @@ where $F(x)$ is the mapping from **images** to **normalized embedding space** le
 For a test image:
 
 $$
-score(\bold{z}, \bold{c}) = 1 - \frac{\bold{z} \cdot \bold{c}}{\vert\vert \bold{z}\vert\vert \  \vert\vert  \bold{c}\vert\vert}
+score(\mathbf{z}, \mathbf{c}) = 1 - \frac{\mathbf{z} \cdot \mathbf{c}}{\lVert\mathbf{z}\rVert \lVert\mathbf{c}\rVert}
 $$
 
-Technically, this `score = 1 - cosine_similarity(z,c)`, where **z** is the embedding and **c** is centroid;  as the **z** and **c** are normalized , this reduces to  $1 - \bold{z}\cdot\bold{c}$
+Technically, this `score = 1 - cosine_similarity(z,c)`, where **z** is the embedding and **c** is centroid;  as the **z** and **c** are normalized , this reduces to  $1 - \mathbf{z} \cdot \mathbf{c}$
 
 **Interpretation:**
 
@@ -337,7 +337,7 @@ While the project shows good scores and clustering, it is sensitive to domain sh
 # Repository Structure
 
 ```
-ProdCheck/
+ /
  ├── datasets/
  │     ├── dataset.py
  │     └── transforms.py
