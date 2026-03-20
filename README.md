@@ -186,9 +186,9 @@ The anomaly detection pipeline becomes:
 
 ## Inference Procedure
 
-1. Pass image through encoder to obtain normalized embedding $\bold{z}$.
+1. Pass image through encoder to obtain normalized embedding $\mathbf{z}$.
 
-2. Compute cosine distance $d$ from the stored centroid $\bold{c}$.
+2. Compute cosine distance $d$ from the stored centroid $\mathbf{c}$.
 
 3. Compare distance against stored thresholds for normal ($t_{n}$) and defective ($t_{def}$) distributions.
 
